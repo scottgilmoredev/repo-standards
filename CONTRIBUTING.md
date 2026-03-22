@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Node.js 22
-- npm
+- Node.js 24
+- pnpm
 - git
 - GitHub CLI (`gh`)
 
@@ -11,9 +11,9 @@
 
 ## Development Setup
 ```bash
-git clone git@github.com-scottgilmoredev:scottgilmoredev/repo-standards.git
+git clone git@github.com:scottgilmoredev/repo-standards.git
 cd repo-standards
-npm install
+pnpm install
 ```
 
 ---
@@ -59,8 +59,8 @@ Commits are validated by commitlint on every commit.
 
 This project uses TDD. Write tests before implementation.
 ```bash
-npm run test          # Run tests
-npm run coverage      # Run tests with coverage report
+pnpm run test          # Run tests
+pnpm run coverage      # Run tests with coverage report
 ```
 
 All PRs must have passing tests before merge.
@@ -71,9 +71,9 @@ All PRs must have passing tests before merge.
 
 ESLint and Prettier are enforced via pre-commit hooks. To run manually:
 ```bash
-npm run lint          # Lint
-npm run lint:fix      # Lint and fix
-npm run format        # Format
+pnpm run lint          # Lint
+pnpm run lint:fix      # Lint and fix
+pnpm run format        # Format
 ```
 
 ---

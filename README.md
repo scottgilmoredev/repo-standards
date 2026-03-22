@@ -31,7 +31,7 @@ _GIF coming soon._
 
 | | |
 |---|---|
-| Runtime | Node.js 22 |
+| Runtime | Node.js 24 |
 | Language | JavaScript (ESM) |
 | CLI prompts | [inquirer](https://www.npmjs.com/package/inquirer) |
 | HTTP | Native `fetch` |
@@ -56,7 +56,7 @@ npx repo-standards
 **Global install:**
 
 ```bash
-npm install -g repo-standards
+pnpm install -g repo-standards
 repo-standards
 ```
 

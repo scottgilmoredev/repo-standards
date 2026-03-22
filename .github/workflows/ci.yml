@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+
+  # Uncomment to run on a schedule (e.g. nightly at midnight UTC)
+  # schedule:
+  #   - cron: '0 0 * * *'
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # Add additional versions to test against multiple Node versions
+        node-version: [20.x]
+        # node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+          # Uncomment for yarn or pnpm:
+          # cache: yarn
+          # cache: pnpm
+
+      - name: Install dependencies
+        run: npm ci
+        # Uncomment for yarn or pnpm:
+        # run: yarn install --frozen-lockfile
+        # run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: npx tsc -p tsconfig.json --noEmit
+
+      - name: Lint
+        run: npm run lint
+        # Uncomment for yarn or pnpm:
+        # run: yarn lint
+        # run: pnpm lint
+
+      - name: Run unit tests
+        run: npm run test
+        # Uncomment for yarn or pnpm:
+        # run: yarn test
+        # run: pnpm test
+
+        # Uncomment to generate and upload coverage report
+        # - name: Run unit tests with coverage
+        #   run: npm run test:coverage
+        # - name: Upload coverage report
+        #   uses: codecov/codecov-action@v4
+        #   with:
+        #     token: ${{ secrets.CODECOV_TOKEN }}
+        #     fail_ci_if_error: true
+
+      - name: Build
+        run: npm run build
+        # Uncomment for yarn or pnpm:
+        # run: yarn build
+        # run: pnpm build
+
+  # Uncomment to add a deployment job that runs after build-test passes
+  # deploy:
+  #   needs: build-test
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v4
+  #     - name: Deploy
+  #       run: |
+  #         # Add deployment steps here
+  #         echo "Deploying to production..."

@@ -17,20 +17,18 @@ Please ensure you are always working from the latest version on the `main` branc
 
 If you discover a security vulnerability, please **do not create a public issue**.
 
-Instead, report it responsibly by emailing: **scott@scottgilmore.dev**
+Instead, report them privately via GitHub's security advisory feature:
+[Report a vulnerability](https://github.com/scottgilmoredev/repo-standards/security/advisories/new)
 
-Your report should include:
+Please include as much detail as possible:
 
-- A detailed description of the vulnerability.
-- Steps to reproduce the issue.
-- Any potential fixes or mitigation strategies you can suggest.
+- A description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Any suggested mitigations
 
-We will:
-
-1. Confirm receipt of your report within 48 hours.
-2. Investigate and validate the issue.
-3. Provide an estimated timeline for a fix.
-4. Credit you in the release notes if you want.
+You will receive a response within 48 hours. If the issue is confirmed, a fix
+will be prioritized and a public advisory will be published once resolved.
 
 ---
 
@@ -40,9 +38,3 @@ We kindly ask that you:
 
 - Do not publicly disclose the vulnerability before it is fixed.
 - Do not attempt to exploit the vulnerability beyond what is necessary to demonstrate it.
-
----
-
-## Contact
-
-For all security-related issues, contact: **scott@scottgilmore.dev**

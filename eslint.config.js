@@ -1,7 +1,7 @@
-import js from '@eslint/js';
-import importX from 'eslint-plugin-import-x';
-import globals from 'globals';
-import { defineConfig } from 'eslint/config';
+import js from '@eslint/js'
+import importX from 'eslint-plugin-import-x'
+import globals from 'globals'
+import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
   {
@@ -9,6 +9,12 @@ export default defineConfig([
   },
   js.configs.recommended,
   importX.flatConfigs.recommended,
+  {
+    files: ['vitest.config.js'],
+    rules: {
+      'import-x/no-unresolved': 'off',
+    },
+  },
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -28,4 +34,4 @@ export default defineConfig([
       'import-x/no-duplicates': 'error',
     },
   },
-]);
+])

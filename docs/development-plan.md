@@ -3,6 +3,7 @@
 ## Project Overview
 
 ### Description
+
 A Node.js CLI tool published to npm. Run via `npx repo-standards` inside an
 existing project to interactively install a curated set of repository
 documentation — GitHub templates, community health files, reference docs,
@@ -12,12 +13,14 @@ the current project directory.
 For user stories derived from this plan see [User Stories](user-stories.md).
 
 ### Problem
+
 Starting a new project requires manually locating, copying, and adapting the
 same set of repository documentation across repos: issue templates, PR
 templates, community health files, git and GitHub standards reference docs.
 This is repetitive, inconsistent, and easy to skip under time pressure.
 
 ### Solution
+
 A single `npx` command presents an interactive checklist of available
 documentation bundles. Selected bundles are fetched from the GitHub
 repository via the GitHub Contents API and written into the current project
@@ -25,6 +28,7 @@ directory. A `.repo-standards` lockfile records what was installed and at
 what version.
 
 ### Non-Goals
+
 - Does not generate new projects from scratch — assumes `git init` and
   `npm init` have already run
 - Does not install configuration files, modify `package.json`, or install
@@ -100,23 +104,24 @@ components.json
 
 ## Technical Stack
 
-| Layer | Technology | Notes |
-|---|---|---|
-| Runtime | Node.js 24 | Current LTS |
-| Language | JavaScript (ESM) | No build step required at this scope |
-| CLI prompts | inquirer | Interactive checklist |
-| HTTP | Native `fetch` | Available since Node 18 — no additional dependency |
-| Testing | Vitest | Consistent with project standards |
-| Linting | ESLint + Prettier, Airbnb config | Consistent with project standards |
-| Git hooks | Husky + lint-staged + commitlint | Consistent with project standards |
-| CI | GitHub Actions | Lint, test on PR and push to `main` |
-| Registry | npm | Published as `repo-standards` |
+| Layer       | Technology                                                             | Notes                                                 |
+| ----------- | ---------------------------------------------------------------------- | ----------------------------------------------------- |
+| Runtime     | Node.js 24                                                             | Current LTS                                           |
+| Language    | JavaScript (ESM)                                                       | No build step required at this scope                  |
+| CLI prompts | inquirer                                                               | Interactive checklist                                 |
+| HTTP        | Native `fetch`                                                         | Available since Node 18 — no additional dependency    |
+| Testing     | Vitest                                                                 | Consistent with project standards                     |
+| Linting     | ESLint + Prettier, `@eslint/js` recommended + `eslint-plugin-import-x` | Airbnb config incompatible with ESLint v9 flat config |
+| Git hooks   | Husky + lint-staged + commitlint                                       | Consistent with project standards                     |
+| CI          | GitHub Actions                                                         | Lint, test on PR and push to `main`                   |
+| Registry    | npm                                                                    | Published as `repo-standards`                         |
 
 ---
 
 ## Project Scope
 
 ### In Scope
+
 - Interactive CLI checklist presenting available bundles from `components.json`
 - Fetch selected bundles from the GitHub Contents API
 - Recursive directory resolution — bundle paths pointing to directories are
@@ -130,6 +135,7 @@ components.json
   `labels-script`, `git-standards`, `github-standards`, `dev-standards`
 
 ### Out of Scope
+
 - Updating or diffing previously installed files
 - Removing installed files
 - Installing configuration files or project tooling
@@ -137,6 +143,7 @@ components.json
 - A `--dry-run` flag (deferred to a future version)
 
 ### Constraints
+
 - Minimal dependencies — `inquirer` only. Native `fetch` for HTTP,
   native `fs` for file writing
 - Must work on macOS, Linux, and Windows (WSL)
@@ -146,14 +153,17 @@ components.json
 ## Milestones
 
 ### Milestone 0 — Project Setup
+
 Complete project planning, documentation, repository configuration, and
 local environment setup. Project ready for implementation.
 
 ### Milestone 1 — Core Implementation
+
 `setup.js` built incrementally via TDD. All bundles fetchable and
 installable end-to-end.
 
 ### Milestone 2 — Release
+
 Package prepared, versioned, and published to npm. Includes `bin` field
 and shebang configuration required for `npx` execution without a global
 install.

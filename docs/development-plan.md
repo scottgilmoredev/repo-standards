@@ -106,7 +106,7 @@ components.json
 
 | Layer       | Technology                                                             | Notes                                                 |
 | ----------- | ---------------------------------------------------------------------- | ----------------------------------------------------- |
-| Runtime     | Node.js 24                                                             | Current LTS                                           |
+| Runtime     | Node.js 24.14.0                                                        | Current LTS                                           |
 | Language    | JavaScript (ESM)                                                       | No build step required at this scope                  |
 | CLI prompts | inquirer                                                               | Interactive checklist                                 |
 | HTTP        | Native `fetch`                                                         | Available since Node 18 — no additional dependency    |

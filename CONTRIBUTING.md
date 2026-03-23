@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Node.js 24
+- Node.js 24.14.0
 - pnpm
 - git
 - GitHub CLI (`gh`)
@@ -10,6 +10,7 @@
 ---
 
 ## Development Setup
+
 ```bash
 git clone git@github.com:scottgilmoredev/repo-standards.git
 cd repo-standards
@@ -21,6 +22,7 @@ pnpm install
 ## Branching
 
 Branches follow the format `<prefix>/<issue-number>-<description>`:
+
 ```
 feature/42-add-new-bundle
 fix/87-directory-resolution
@@ -36,6 +38,7 @@ Always branch from `main`. Open an issue before starting work on anything substa
 ## Commits
 
 This project follows [Conventional Commits](https://www.conventionalcommits.org). Every commit message must complete the sentence **"This commit will…"**:
+
 ```
 feat: add select all option to checklist
 fix: resolve directory resolution for nested paths
@@ -58,6 +61,7 @@ Commits are validated by commitlint on every commit.
 ## Testing
 
 This project uses TDD. Write tests before implementation.
+
 ```bash
 pnpm run test          # Run tests
 pnpm run coverage      # Run tests with coverage report
@@ -70,6 +74,7 @@ All PRs must have passing tests before merge.
 ## Code Style
 
 ESLint and Prettier are enforced via pre-commit hooks. To run manually:
+
 ```bash
 pnpm run lint          # Lint
 pnpm run lint:fix      # Lint and fix

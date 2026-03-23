@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "bundles": {
+    "github-templates": {
+      "description": "Issue templates, PR templates, and default PR template. Drop into any GitHub repository.",
+      "paths": [
+        ".github/ISSUE_TEMPLATE",
+        ".github/PULL_REQUEST_TEMPLATE",
+        ".github/pull_request_template.md"
+      ]
+    },
+    "community-health": {
+      "description": "Standard community health files — CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, CHANGELOG, CODEOWNERS. Essential for public and open source repositories.",
+      "paths": [
+        "community/CONTRIBUTING.md",
+        "community/CODE_OF_CONDUCT.md",
+        "community/SECURITY.md",
+        "community/CHANGELOG.md",
+        "community/CODEOWNERS"
+      ]
+    },
+    "readme-templates": {
+      "description": "README templates for four common project types — app, library, CLI, and API. Copy and rename the appropriate template to README.md.",
+      "paths": [
+        "community/README-app.md",
+        "community/README-library.md",
+        "community/README-cli.md",
+        "community/README-api.md"
+      ]
+    },
+    "labels-script": {
+      "description": "Shell script that creates the standard GitHub label set via the GitHub CLI. Run once after creating a new repository. Requires gh CLI.",
+      "paths": ["community/create-labels.sh"]
+    },
+    "git-standards": {
+      "description": "Reference docs for branching strategy, Conventional Commits, PR conventions, and semantic versioning. Pairs well with github-templates.",
+      "paths": [
+        "docs/git-standards/branching-strategy.md",
+        "docs/git-standards/conventional-commits.md",
+        "docs/git-standards/pr-conventions.md",
+        "docs/git-standards/semantic-versioning.md"
+      ]
+    },
+    "github-standards": {
+      "description": "Reference docs for GitHub labels, issues, milestones, and PR sidebar usage. Pairs well with github-templates and labels-script.",
+      "paths": [
+        "docs/github-standards/github-labels.md",
+        "docs/github-standards/github-issues.md",
+        "docs/github-standards/github-milestones.md",
+        "docs/github-standards/github-pr-sidebar.md"
+      ]
+    },
+    "dev-standards": {
+      "description": "Reference docs for environment variables, TDD, and software licenses.",
+      "paths": [
+        "docs/dev-standards/environment-variables.md",
+        "docs/dev-standards/tdd-reference.md",
+        "docs/dev-standards/software-licenses.md"
+      ]
+    }
+  }
+}

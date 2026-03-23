@@ -1,6 +1,6 @@
 # repo-standards
 
-[![CI](https://github.com/<username>/repo-standards/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/repo-standards/actions/workflows/ci.yml)
+[![CI](https://github.com/scottgilmoredev/repo-standards/actions/workflows/ci.yml/badge.svg)](https://github.com/scottgilmoredev/repo-standards/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/repo-standards.svg)](https://www.npmjs.com/package/repo-standards)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 

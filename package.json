@@ -1,0 +1,18 @@
+{
+  "name": "repo-standards",
+  "version": "0.1.0",
+  "description": "A CLI tool that installs repository documentation into an existing project",
+  "type": "module",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "license": "MIT"
+}

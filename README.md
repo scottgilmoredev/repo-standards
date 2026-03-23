@@ -1,7 +1,7 @@
 # repo-standards
 
-<!-- [![CI](https://github.com/<username>/repo-standards/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/repo-standards/actions/workflows/ci.yml) -->
-<!-- [![npm version](https://img.shields.io/npm/v/repo-standards.svg)](https://www.npmjs.com/package/repo-standards) -->
+[![CI](https://github.com/<username>/repo-standards/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/repo-standards/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/repo-standards.svg)](https://www.npmjs.com/package/repo-standards)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A Node.js CLI tool that installs repository documentation into an existing
@@ -29,12 +29,12 @@ _GIF coming soon._
 
 ## Tech Stack
 
-| | |
-|---|---|
-| Runtime | Node.js 24 |
-| Language | JavaScript (ESM) |
+|             |                                                    |
+| ----------- | -------------------------------------------------- |
+| Runtime     | Node.js 24                                         |
+| Language    | JavaScript (ESM)                                   |
 | CLI prompts | [inquirer](https://www.npmjs.com/package/inquirer) |
-| HTTP | Native `fetch` |
+| HTTP        | Native `fetch`                                     |
 
 ---
 
@@ -79,15 +79,15 @@ Commit this file — it records what was installed and at what version.
 
 ### Available Bundles
 
-| Bundle | Description |
-|---|---|
-| `github-templates` | Issue templates, PR templates, and default PR template |
-| `community-health` | CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, CHANGELOG, CODEOWNERS |
-| `readme-templates` | README templates for app, library, CLI, and API project types |
-| `labels-script` | Shell script to create the standard GitHub label set via the GitHub CLI |
-| `git-standards` | Reference docs for branching, Conventional Commits, PR conventions, and semantic versioning |
-| `github-standards` | Reference docs for GitHub labels, issues, milestones, and PR sidebar usage |
-| `dev-standards` | Reference docs for environment variables, TDD, and software licenses |
+| Bundle             | Description                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------- |
+| `github-templates` | Issue templates, PR templates, and default PR template                                      |
+| `community-health` | CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, CHANGELOG, CODEOWNERS                              |
+| `readme-templates` | README templates for app, library, CLI, and API project types                               |
+| `labels-script`    | Shell script to create the standard GitHub label set via the GitHub CLI                     |
+| `git-standards`    | Reference docs for branching, Conventional Commits, PR conventions, and semantic versioning |
+| `github-standards` | Reference docs for GitHub labels, issues, milestones, and PR sidebar usage                  |
+| `dev-standards`    | Reference docs for environment variables, TDD, and software licenses                        |
 
 ### File Conflicts
 

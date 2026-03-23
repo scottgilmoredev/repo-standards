@@ -44,9 +44,15 @@ const buildHeaders = () => {
  * @private
  */
 const fetchFromApi = async path => {
-  const response = await fetch(buildUrl(path), {
-    headers: buildHeaders(),
-  })
+  let response
+
+  try {
+    response = await fetch(buildUrl(path), {
+      headers: buildHeaders(),
+    })
+  } catch (err) {
+    throw new Error(`Failed to fetch: ${path}`, { cause: err })
+  }
 
   if (!response.ok) {
     throw new Error(`Failed to fetch: ${path} (status ${response.status})`)

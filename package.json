@@ -4,7 +4,7 @@
   "description": "A CLI tool that installs repository documentation into an existing project",
   "type": "module",
   "engines": {
-    "node": ">=24",
+    "node": ">=22",
     "pnpm": ">=10"
   },
   "scripts": {

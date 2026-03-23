@@ -1,5 +1,5 @@
 import js from '@eslint/js'
-import importX from 'eslint-plugin-import-x'
+import { flatConfigs } from 'eslint-plugin-import-x'
 import globals from 'globals'
 import { defineConfig } from 'eslint/config'
 
@@ -8,7 +8,7 @@ export default defineConfig([
     ignores: ['node_modules', 'coverage'],
   },
   js.configs.recommended,
-  importX.flatConfigs.recommended,
+  flatConfigs.recommended,
   {
     files: ['vitest.config.js'],
     rules: {
@@ -21,6 +21,7 @@ export default defineConfig([
       sourceType: 'module',
       globals: {
         ...globals.node,
+        ...globals.vitest,
       },
     },
     rules: {

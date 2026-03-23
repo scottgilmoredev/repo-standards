@@ -11,8 +11,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "test": "vitest --passWithNoTests",
-    "coverage": "vitest run --coverage --passWithNoTests",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "test:watch": "vitest",
     "prepare": "husky"
   },
   "license": "MIT",

@@ -1,0 +1,24 @@
+# CODEOWNERS
+#
+# This file designates individuals or teams responsible for reviewing code changes.
+# When a pull request modifies a file matching a pattern below, GitHub automatically
+# requests a review from the designated owner(s).
+#
+# Rules are matched in order — the last matching rule takes precedence.
+# Owners must have write access to the repository.
+#
+# Syntax:
+#   <pattern>   @<username-or-team>
+#
+# Documentation:
+#   https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner — fallback for all files not matched by a more specific rule
+*       @<username>
+
+# Examples — uncomment and customize as needed:
+# src/auth/*          @<username>          # Auth module
+# src/api/*           @<username>          # API layer
+# docs/*              @<username>          # Documentation
+# .github/*           @<username>          # CI/CD and repo config
+# *.md                @<username>          # All Markdown files

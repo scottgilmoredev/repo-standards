@@ -306,4 +306,37 @@ describe('run', () => {
     // Assert — git-standards (1 path) + github-templates (2 paths) = 3 calls
     expect(fetchFile).toHaveBeenCalledTimes(3)
   })
+
+  /**
+   * @test
+   * @description Confirms errors during fetch propagate and abort installation
+   */
+  it('propagates errors from fetchBundlePaths', async () => {
+    // Arrange
+    mockComponentsLoad()
+    inquirer.prompt.mockResolvedValueOnce({ selected: ['git-standards'] })
+    fetchDirectory.mockRejectedValueOnce(new Error())
+    fetchFile.mockRejectedValueOnce(new Error('API error'))
+
+    // Act + Assert
+    await expect(run()).rejects.toThrow('API error')
+  })
+
+  /**
+   * @test
+   * @description Confirms the lockfile is not written if installation fails mid-way
+   */
+  it('does not write the lockfile if installation fails', async () => {
+    // Arrange
+    mockComponentsLoad()
+    inquirer.prompt.mockResolvedValueOnce({ selected: ['git-standards'] })
+    fetchDirectory.mockRejectedValueOnce(new Error())
+    fetchFile.mockRejectedValueOnce(new Error('API error'))
+
+    // Act
+    await run().catch(() => {})
+
+    // Assert — lockfile must not be written if install did not complete
+    expect(writeFile).not.toHaveBeenCalled()
+  })
 })

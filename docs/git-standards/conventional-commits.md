@@ -71,7 +71,7 @@ This naturally enforces the correct tense and phrasing without ambiguity.
 | `revert`   | Reverts a previous commit                                | —             |
 
 > [!note] Branch Prefix Alignment
-> Commit types align directly with branch naming prefixes defined in [[branching-strategy]]. `revert` is the only type without a corresponding branch prefix — reverts are typically committed directly on an existing branch rather than a dedicated one.
+> Commit types align directly with branch naming prefixes defined in [branching-strategy](branching-strategy.md). `revert` is the only type without a corresponding branch prefix — reverts are typically committed directly on an existing branch rather than a dedicated one.
 
 ---
 
@@ -163,4 +163,4 @@ revert:            revert a previous commit
 
 ---
 
-_Related: [[branching-strategy]] · [[pr-conventions]] · [[git-reference]]_
+_Related: [branching-strategy](branching-strategy.md) · [pr-conventions](pr-conventions.md) · git-reference_

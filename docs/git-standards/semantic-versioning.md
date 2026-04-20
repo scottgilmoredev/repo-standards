@@ -120,7 +120,7 @@ Conventional Commits align directly with SemVer increments:
 | `feat!:` or `BREAKING CHANGE:` footer                    | `MAJOR`           |
 | `chore:`, `docs:`, `style:`, `refactor:`, `test:`, `ci:` | No version change |
 
-This alignment is what makes automated changelog and release tooling possible — see `[[release-drafter]]`.
+This alignment is what makes automated changelog and release tooling possible — see release-drafter.
 
 ---
 
@@ -210,7 +210,7 @@ gh release create v1.4.2-beta.1 --prerelease
 ```
 
 > [!tip] Automating Release Notes
-> Release Drafter can generate release notes automatically from PR titles and labels. See `[[release-drafter]]` for setup.
+> Release Drafter can generate release notes automatically from PR titles and labels. See release-drafter for setup.
 
 ---
 
@@ -236,4 +236,4 @@ The following topics were intentionally excluded and may be added in a future re
 
 ---
 
-_Related: `[[conventional-commits]]` · `[[release-drafter]]` · `[[release-process]]` · `[[open-source-prep]]` · `[[git-reference#Tags]]`_
+_Related: [conventional-commits](conventional-commits.md) · release-drafter · release-process · open-source-prep · git-reference_

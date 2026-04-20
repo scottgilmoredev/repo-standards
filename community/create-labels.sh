@@ -4,7 +4,12 @@
 # Requires: GitHub CLI (gh) authenticated — run `gh auth login` first.
 # Usage: bash create-labels.sh
 
-set -e
+set -euo pipefail
+
+if ! command -v gh &>/dev/null; then
+  echo "Error: GitHub CLI (gh) not found. Install from https://cli.github.com" >&2
+  exit 1
+fi
 
 echo "Creating type labels..."
 gh label create "feat"          --color "0075ca" --description "New feature or enhancement" --force

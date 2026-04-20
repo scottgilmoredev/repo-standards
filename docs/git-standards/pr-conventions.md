@@ -4,7 +4,7 @@
 
 This document covers pull request conventions — titles, draft PRs, the template system, review etiquette, GitHub review tools, and CodeRabbit integration. Consistent PR practices make code review faster, history more readable, and collaboration smoother regardless of team size.
 
-For branch naming conventions see `[[branching-strategy]]`. For commit message conventions see `[[conventional-commits]]`.
+For branch naming conventions see [branching-strategy](branching-strategy.md). For commit message conventions see [conventional-commits](conventional-commits.md).
 
 ---
 
@@ -29,7 +29,7 @@ chore: upgrade dependencies to latest
 ```
 
 > [!tip] Description Convention
-> PR title descriptions follow the same convention as commit message descriptions — they should complete the sentence "This commit will …". See `[[conventional-commits#Description Convention]]`.
+> PR title descriptions follow the same convention as commit message descriptions — they should complete the sentence "This commit will …". See [conventional-commits](conventional-commits.md).
 
 > [!note] Issue Number
 > Include the issue number when one exists. Omit it for changes that do not have a corresponding issue — e.g. small documentation fixes or minor chores.
@@ -120,7 +120,7 @@ https://github.com/<username>/<repo>/compare/main...feature/42-user-auth?quick_p
 | `ci.md`       | `ci/`         | CI/CD configuration changes                      |
 
 > [!note] Template Files
-> Template content and creation instructions are covered in `[[pr-templates]]`.
+> Template content and creation instructions are covered in pr-templates.
 
 ---
 
@@ -246,4 +246,4 @@ A PR should represent a single, reviewable unit of work. Large PRs are harder to
 
 ---
 
-_Related: [[branching-strategy]] · [[conventional-commits]] · [[pr-templates]] · [[git-reference]]_
+_Related: [branching-strategy](branching-strategy.md) · [conventional-commits](conventional-commits.md) · pr-templates · git-reference_

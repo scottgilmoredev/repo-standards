@@ -101,11 +101,10 @@ gh pr create --template "feature.md"
 
 ## Code Standards
 
-- **Language:** TypeScript
-- **Module system:** ESM (`"type": "module"`)
-- **Style:** Airbnb ESLint config with Prettier
-- **Testing:** Vitest — this project practices TDD
-- **Documentation:** All modules, functions, and types must include JSDoc comments
+- **Language:** `<language>`
+- **Style:** `<linter>` with Prettier
+- **Testing:** `<test framework>` — this project practices TDD
+- **Documentation:** All modules and functions must include doc comments
 - **Structure:** DRY, modular, and consistent
 
 Run checks locally before opening a PR:
@@ -114,8 +113,6 @@ Run checks locally before opening a PR:
 npm run lint
 npm run lint:fix
 npm run format
-npm run format:check
-npm run typecheck
 ```
 
 ---

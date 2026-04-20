@@ -4,7 +4,7 @@
 
 This document covers branching workflows, branch naming conventions, and merge strategies. The goal is a consistent, professional approach that works across solo projects, small teams, and larger collaborative environments.
 
-For commit message conventions see [[conventional-commits]]. For pull request conventions see [[pr-conventions]].
+For commit message conventions see [conventional-commits](conventional-commits.md). For pull request conventions see [pr-conventions](pr-conventions.md).
 
 ---
 
@@ -130,13 +130,13 @@ chore/upgrade-dependencies
 | `ci/`       | CI/CD configuration changes                              |
 
 > [!note]
-> `revert` is a valid Conventional Commits type but does not have a corresponding branch prefix — reverts are typically committed directly on an existing branch rather than a dedicated one. See [[conventional-commits]] for usage.
+> `revert` is a valid Conventional Commits type but does not have a corresponding branch prefix — reverts are typically committed directly on an existing branch rather than a dedicated one. See [conventional-commits](conventional-commits.md) for usage.
 
 > [!tip] When There Is No Issue Number
 > Not every branch needs a corresponding issue. For small changes, the short description alone is sufficient — e.g. `docs/update-readme`. For anything substantial, opening an issue first is good practice as it creates a record of the intent and discussion before the work begins.
 
 > [!note] Commit Message Prefixes
-> Branch prefixes align intentionally with Conventional Commits type conventions — `fix/` branches typically contain `fix:` commits, `feature/` branches typically contain `feat:` commits, and so on. See [[conventional-commits]] for the full commit message convention.
+> Branch prefixes align intentionally with Conventional Commits type conventions — `fix/` branches typically contain `fix:` commits, `feature/` branches typically contain `feat:` commits, and so on. See [conventional-commits](conventional-commits.md) for the full commit message convention.
 
 ---
 
@@ -230,4 +230,4 @@ For any shared or professional repository, configure branch protection rules on 
 
 ---
 
-_Related: [[git-reference]] · [[conventional-commits]] · [[pr-conventions]] · [[git-github-setup]]_
+_Related: git-reference · [conventional-commits](conventional-commits.md) · [pr-conventions](pr-conventions.md) · git-github-setup_

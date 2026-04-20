@@ -4,7 +4,7 @@
 
 Labels categorize issues and pull requests, making them filterable, searchable, and easier to triage. This document covers creating and managing labels, a recommended default label set, and how to apply that set to a new repository via script.
 
-For label automation via GitHub Actions see [[github-actions]].
+For label automation via GitHub Actions see github-actions.
 
 ---
 
@@ -26,7 +26,7 @@ Labels are organized into three tiers — type, priority, and status. Using a co
 
 ### Type Labels
 
-Aligned with branch prefix and Conventional Commits conventions — see [[branching-strategy]] and [[conventional-commits]].
+Aligned with branch prefix and Conventional Commits conventions — see [branching-strategy](../git-standards/branching-strategy.md) and [conventional-commits](../git-standards/conventional-commits.md).
 
 | Label        | Color     | Description                                      |
 | ------------ | --------- | ------------------------------------------------ |
@@ -204,4 +204,4 @@ gh pr create --label "<label>"
 
 ---
 
-_Related: [[github-issues]] · [[github-milestones]] · [[github-pr-sidebar]] · [[branching-strategy]] · [[conventional-commits]] · [[github-actions]]_
+_Related: [github-issues](github-issues.md) · [github-milestones](github-milestones.md) · [github-pr-sidebar](github-pr-sidebar.md) · [branching-strategy](../git-standards/branching-strategy.md) · [conventional-commits](../git-standards/conventional-commits.md) · github-actions_

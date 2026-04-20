@@ -51,12 +51,8 @@
       ]
     },
     "dev-standards": {
-      "description": "Reference docs for environment variables, TDD, and software licenses.",
-      "paths": [
-        "docs/dev-standards/environment-variables.md",
-        "docs/dev-standards/tdd-reference.md",
-        "docs/dev-standards/software-licenses.md"
-      ]
+      "description": "Reference docs for TDD and software licenses.",
+      "paths": ["docs/dev-standards/tdd-reference.md", "docs/dev-standards/software-licenses.md"]
     }
   }
 }

@@ -177,8 +177,6 @@ Vitest is configured in `vite.config.ts` under the `test` key. The following cov
 
 ### Full Configuration Example
 
-typescript
-
 ```typescript
 import { defineConfig } from 'vitest/config'
 
@@ -210,8 +208,6 @@ export default defineConfig({
 **`globals`**
 
 When `true`, Vitest's test functions — `describe`, `it`, `test`, `expect`, `beforeEach`, `afterEach`, etc. — are available globally without importing them.
-
-typescript
 
 ```typescript
 // globals: false (default) — explicit imports required
@@ -247,8 +243,6 @@ Defines the environment that simulates where the code runs. This affects what gl
 | `jsdom`     | Browser DOM           | React, Angular, Vue components        |
 | `happy-dom` | Browser DOM (lighter) | Component testing — faster than jsdom |
 
-typescript
-
 ```typescript
 environment: 'node' // default — no DOM APIs available
 environment: 'jsdom' // document, window, etc. available
@@ -260,8 +254,6 @@ environment: 'jsdom' // document, window, etc. available
 
 Glob patterns defining which files Vitest treats as test files. Defaults to `**/*.{test,spec}.{js,ts,jsx,tsx}`.
 
-typescript
-
 ```typescript
 include: ['src/**/*.test.ts'] // Only TypeScript test files in src/
 ```
@@ -269,8 +261,6 @@ include: ['src/**/*.test.ts'] // Only TypeScript test files in src/
 **`exclude`**
 
 Glob patterns for files to exclude from test discovery.
-
-typescript
 
 ```typescript
 exclude: ['node_modules', 'dist', 'src/**/*.integration.test.ts']
@@ -280,13 +270,9 @@ exclude: ['node_modules', 'dist', 'src/**/*.integration.test.ts']
 
 Files to run before each test file. Used for global test setup — configuring mocks, extending matchers, setting environment variables.
 
-typescript
-
 ```typescript
 setupFiles: ['src/test/setup.ts']
 ```
-
-typescript
 
 ```typescript
 // src/test/setup.ts
@@ -302,8 +288,6 @@ afterEach(() => {
 
 Maximum time in milliseconds a single test can run before it is considered failed. Default is 5000ms (5 seconds).
 
-typescript
-
 ```typescript
 testTimeout: 10000 // 10 seconds — appropriate for tests involving network calls
 ```
@@ -313,8 +297,6 @@ testTimeout: 10000 // 10 seconds — appropriate for tests involving network cal
 **`reporters`**
 
 Controls test output format.
-
-typescript
 
 ```typescript
 reporters: ['verbose'] // Shows each test name as it runs

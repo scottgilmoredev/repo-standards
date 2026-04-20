@@ -4,7 +4,7 @@
 
 Milestones group related issues and pull requests around a shared goal — a feature release, a sprint, a project phase. They provide a progress view showing how many open and closed issues remain, making them useful for both planning and stakeholder communication.
 
-For linking issues to milestones and the full issue workflow see [[github-issues]]. For roadmap planning see [[milestones-and-roadmap]].
+For linking issues to milestones and the full issue workflow see [github-issues](github-issues.md). For roadmap planning see milestones-and-roadmap.
 
 ---
 
@@ -100,7 +100,7 @@ Deliver a working authentication system with login, logout, and password reset.
 
 ## Linking Issues and PRs
 
-Issues and PRs are linked to a milestone via the **Milestone** field in the GitHub sidebar — covered in detail in [[github-pr-sidebar]].
+Issues and PRs are linked to a milestone via the **Milestone** field in the GitHub sidebar — covered in detail in [github-pr-sidebar](github-pr-sidebar.md).
 
 Via CLI:
 
@@ -153,7 +153,7 @@ gh api \
 ```
 
 > [!note]
-> Closing a milestone does not close its issues. Issues must be closed individually or via PR merge with closing keywords — see [[github-issues]].
+> Closing a milestone does not close its issues. Issues must be closed individually or via PR merge with closing keywords — see [github-issues](github-issues.md).
 
 ---
 
@@ -180,4 +180,4 @@ The following topics were intentionally excluded and may be added in a future re
 
 ---
 
-_Related: [[github-issues]] · [[github-labels]] · [[github-pr-sidebar]] · [[milestones-and-roadmap]] · [[project-setup-checklist]]_
+_Related: [github-issues](github-issues.md) · [github-labels](github-labels.md) · [github-pr-sidebar](github-pr-sidebar.md) · milestones-and-roadmap · project-setup-checklist_

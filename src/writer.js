@@ -8,7 +8,7 @@
  */
 
 import { mkdir, writeFile as fsWriteFile, access } from 'node:fs/promises'
-import { dirname, join } from 'node:path'
+import { dirname, resolve, sep } from 'node:path'
 
 import inquirer from 'inquirer'
 
@@ -41,7 +41,14 @@ const fileExists = async absPath => {
  * @returns {Promise<void>}
  */
 export const writeFile = async ({ path: filePath, content }) => {
-  const absPath = join(process.cwd(), filePath)
+  const cwd = process.cwd()
+  const absPath = resolve(cwd, filePath)
+
+  // Guard against path traversal — absolute paths and .. segments both escape cwd via resolve
+  if (!absPath.startsWith(cwd + sep)) {
+    throw new Error(`Refusing to write outside project root: ${filePath}`)
+  }
+
   const dir = dirname(absPath)
 
   // recursive: true silently no-ops if the directory already exists

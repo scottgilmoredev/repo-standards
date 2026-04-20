@@ -169,4 +169,16 @@ describe('writeFile', () => {
     // Assert
     expect(fsWriteFile).not.toHaveBeenCalled()
   })
+
+  /**
+   * @test
+   * @description Confirms paths that escape the project root are rejected
+   */
+  it('throws when path resolves outside the project root', async () => {
+    // Arrange — .. segments escape cwd after resolve normalizes them
+    const traversalFile = { path: '../../etc/passwd', content: 'x' }
+
+    // Act + Assert
+    await expect(writeFile(traversalFile)).rejects.toThrow('outside project root')
+  })
 })

@@ -15,7 +15,8 @@ import { BASE_URL } from './constants.js'
  * @returns {string} Full API URL
  * @private
  */
-const buildUrl = path => `${BASE_URL}/${path}`
+// encode each segment separately to preserve / as a path delimiter
+const buildUrl = path => `${BASE_URL}/${path.split('/').map(encodeURIComponent).join('/')}`
 
 /**
  * Build request headers
@@ -70,6 +71,11 @@ const fetchFromApi = async path => {
  */
 export const fetchFile = async path => {
   const response = await fetchFromApi(path)
+
+  // GitHub returns encoding: 'none' and empty content for files > 1MB
+  if (response.encoding === 'none' || !response.content) {
+    throw new Error(`File too large to fetch inline: ${path}`)
+  }
 
   return {
     path: response.path,

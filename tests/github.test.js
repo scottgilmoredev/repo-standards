@@ -147,6 +147,39 @@ describe('fetchFile', () => {
       'docs/git-standards/branching-strategy.md'
     )
   })
+
+  /**
+   * @test
+   * @description Confirms path segments are URL-encoded in the request URL
+   */
+  it('encodes reserved characters in the request URL', async () => {
+    // Arrange
+    const encodedResponse = { ...mockFileResponse, path: 'docs/file with spaces.md' }
+    fetch.mockResolvedValueOnce(mockFetchResponse(encodedResponse))
+
+    // Act
+    await fetchFile('docs/file with spaces.md')
+
+    // Assert
+    expect(fetch).toHaveBeenCalledWith(
+      expect.stringContaining('file%20with%20spaces.md'),
+      expect.any(Object)
+    )
+  })
+
+  /**
+   * @test
+   * @description Confirms an error is thrown for files the API cannot return inline (>1MB)
+   */
+  it('throws for files the API cannot return inline', async () => {
+    // Arrange — GitHub returns encoding: 'none' and empty content for files > 1MB
+    fetch.mockResolvedValueOnce(
+      mockFetchResponse({ ...mockFileResponse, encoding: 'none', content: '' })
+    )
+
+    // Act + Assert
+    await expect(fetchFile('docs/git-standards/branching-strategy.md')).rejects.toThrow('too large')
+  })
 })
 
 /**

@@ -10,6 +10,7 @@
  */
 
 import { readFile, writeFile } from 'node:fs/promises'
+import { realpathSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -142,4 +143,12 @@ export const run = async () => {
   await writeLockfile(version, selected)
   // eslint-disable-next-line no-console
   console.log(`Installed ${selected.length} bundle(s). Lockfile written to .repo-standards`)
+}
+
+if (realpathSync(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  run().catch(err => {
+    // eslint-disable-next-line no-console
+    console.error(err.message)
+    process.exit(1)
+  })
 }

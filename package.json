@@ -2,6 +2,9 @@
   "name": "repo-standards",
   "version": "0.1.0",
   "description": "A CLI tool that installs repository documentation into an existing project",
+  "bin": {
+    "repo-standards": "./src/setup.js"
+  },
   "type": "module",
   "engines": {
     "node": ">=22",

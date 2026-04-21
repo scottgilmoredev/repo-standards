@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.1] - 2026-04-21
+
+### Fixed
+
+- Stale `dev-standards` bundle description in README (removed environment variables reference)
+
+### Changed
+
+- Added npm keywords for discoverability
+
+---
+
 ## [1.0.0] - 2026-04-21
 
 ### Added

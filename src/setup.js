@@ -146,5 +146,9 @@ export const run = async () => {
 }
 
 if (realpathSync(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  run()
+  run().catch(err => {
+    // eslint-disable-next-line no-console
+    console.error(err.message)
+    process.exit(1)
+  })
 }

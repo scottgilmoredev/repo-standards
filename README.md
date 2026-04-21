@@ -87,7 +87,7 @@ Commit this file — it records what was installed and at what version.
 | `labels-script`    | Shell script to create the standard GitHub label set via the GitHub CLI                     |
 | `git-standards`    | Reference docs for branching, Conventional Commits, PR conventions, and semantic versioning |
 | `github-standards` | Reference docs for GitHub labels, issues, milestones, and PR sidebar usage                  |
-| `dev-standards`    | Reference docs for environment variables, TDD, and software licenses                        |
+| `dev-standards`    | Reference docs for TDD and software licenses                                                |
 
 ### File Conflicts
 

@@ -20,6 +20,14 @@
     "e2e": "node tests/e2e.mjs",
     "prepare": "husky"
   },
+  "keywords": [
+    "cli",
+    "github",
+    "git",
+    "templates",
+    "standards",
+    "documentation"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
